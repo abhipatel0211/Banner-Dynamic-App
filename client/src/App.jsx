@@ -25,7 +25,9 @@ const App = () => {
   };
   useEffect(() => {
     const fetchBannerData = async () => {
-      const res = await axios.get("http://localhost:5000/api/banner");
+      const res = await axios.get(
+        "https://banner-dynamic-app-backend.vercel.app/api/banner"
+      );
       const data = res.data;
       console.log(data);
       setBannerData({

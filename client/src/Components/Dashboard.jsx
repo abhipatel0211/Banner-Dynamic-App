@@ -18,7 +18,7 @@ const Dashboard = ({ handleUpdateBanner }) => {
       isVisible,
     };
     const res = await axios
-      .post("http://localhost:5000/api/banner", data)
+      .post("https://banner-dynamic-app-backend.vercel.app/api/banner", data)
       .then((res) => {
         setSubmittedData({ ...data, res: res.data });
       });
@@ -36,9 +36,12 @@ const Dashboard = ({ handleUpdateBanner }) => {
 
   const debouncedVisibilityChange = useCallback(
     debounce(async (visible) => {
-      await axios.post("http://localhost:5000/api/visibility", {
-        visible,
-      });
+      await axios.post(
+        "https://banner-dynamic-app-backend.vercel.app/api/visibility",
+        {
+          visible,
+        }
+      );
       console.log("Visibility changed:", visible);
     }, 1000),
     []
