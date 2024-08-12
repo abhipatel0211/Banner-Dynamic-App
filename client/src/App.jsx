@@ -30,9 +30,13 @@ const App = () => {
       );
       const data = res.data;
       console.log(data);
+      console.log(data.date);
+      const date = new Date(data.date);
+      date.setHours(date.getHours() - 5);
+      date.setMinutes(date.getMinutes() - 30);
       setBannerData({
         description: data.description,
-        date: new Date(data.date),
+        date: date,
         link: data.link,
         isVisible: data.is_visible,
       });
