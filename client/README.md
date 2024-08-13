@@ -1,8 +1,21 @@
-# React + Vite
+# Steps to setup the server
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+step 1: After Cloning the Repository run the code 
+```
+npm i 
+```
+or
+```
+yarn
+```
 
-Currently, two official plugins are available:
+step 2: Now run command
+```
+npm run dev
+```
+or 
+```
+yarn dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+step 3: Server will start running on port 5173
